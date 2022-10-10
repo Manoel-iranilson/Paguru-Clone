@@ -188,8 +188,8 @@ function App() {
             </Center>
           </>}
 
-        <Text ml={5} mt={5} fontSize={50} color="#fff">O que fazemos.</Text>
-        <a href="#0">2</a>
+
+
         <Card />
 
 

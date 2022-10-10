@@ -20,23 +20,12 @@ const Card: React.FC = () => {
     return (
         <>
             {isDesktop ?
-                <Flex flexWrap="wrap">
-                    {fazemos.map((e) => (
-                        <Box m={3} mt={10} p={5} borderRadius={10} w={"22rem"} bg="#1B1918" color='white' >
-                            <div id={e.id} style={{ width: "20rem" }}>
-                                <img src={e.icon} />
-                                <Text mt={3} mb={3} fontSize={20} fontWeight={"bold"}>{e.title}</Text>
-                                <Text>{e.body}</Text>
-                            </div>
-                        </Box>
-                    ))}
-                </Flex>
-                :
-                <div className="overflow-auto">
-                    <Flex >
+                <>
+                    <Text ml={5} mt={5} fontSize={50} color="#fff">O que fazemos.</Text>
+                    <Flex flexWrap="wrap">
                         {fazemos.map((e) => (
-                            <Box m={3} mt={10} p={5} borderRadius={10} bg="#1B1918" color='white' >
-                                <div id={e.id} style={{ width: "13rem", height: "19rem" }}>
+                            <Box m={3} mt={10} p={5} borderRadius={10} w={"22rem"} bg="#1B1918" color='white' >
+                                <div id={e.id} style={{ width: "20rem" }}>
                                     <img src={e.icon} />
                                     <Text mt={3} mb={3} fontSize={20} fontWeight={"bold"}>{e.title}</Text>
                                     <Text>{e.body}</Text>
@@ -44,7 +33,24 @@ const Card: React.FC = () => {
                             </Box>
                         ))}
                     </Flex>
-                </div>
+                </>
+                :
+                <>
+                    <Text ml={5} mt={5} fontSize={30} color="#fff">O que fazemos.</Text>
+                    <div className="overflow-auto">
+                        <Flex >
+                            {fazemos.map((e) => (
+                                <Box m={3} mt={10} p={5} borderRadius={10} bg="#1B1918" color='white' >
+                                    <div id={e.id} style={{ width: "13rem", height: "19rem" }}>
+                                        <img src={e.icon} />
+                                        <Text mt={3} mb={3} fontSize={20} fontWeight={"bold"}>{e.title}</Text>
+                                        <Text>{e.body}</Text>
+                                    </div>
+                                </Box>
+                            ))}
+                        </Flex>
+                    </div>
+                </>
             }
         </>
     );
