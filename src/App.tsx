@@ -37,11 +37,13 @@ function App() {
             <GridItem colSpan={1}>  <Flex as={Link} to='/'> <img src={Logo} alt="Paguru-logo" style={{ maxWidth: "10rem" }} /></Flex> </GridItem>
             <GridItem rowSpan={4} mt={2} me={20} flexDirection="row">
               <Flex textColor="#e5e5e5" justifyContent="space-between" fontSize={"16px"}>
-                <Flex as={Link} to='#Fazemos'> O que fazemos</Flex>
-                <Flex as={Link} to='#Cases'> Nossos cases</Flex>
-                <Flex as={Link} to='#Blog'> Blog</Flex>
-                <Flex as={Link} to='#Blog'> |</Flex>
-                <Flex as={Link} to='#Orcamento' textColor="#F15a24"> PEÇA UM ORÇAMENTO</Flex>
+                <Link to='#Fazemos'> <Text textColor="#fff" >  O que fazemos</Text></Link>
+                <Link to='#Cases'> <Text textColor="#fff" > Nossos cases</Text> </Link>
+                <Link to='#Blog' > <Text textColor="#fff" >Blog </Text> </Link>
+                <Text fontWeight={"bold"} >
+                  |
+                </Text>
+                <Link to='#Orcamento'> <Text textColor="#F15a24" > PEÇA UM ORÇAMENTO </Text></Link>
               </Flex>
             </GridItem>
           </Grid>
